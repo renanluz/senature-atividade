@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.senature.sc.entity.TipoVaga;
 
-public class TipoVagaDAOImpl extends GenericDAOImpl<TipoVaga, Integer>{
+public class TipoVagaDAOImpl extends GenericDAOImpl<TipoVaga, Integer> implements TipoVagaDAO{
 
 	public TipoVagaDAOImpl() {
 		super();
