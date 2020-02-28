@@ -13,9 +13,9 @@ public class VagaDAOImpl extends GenericDAOImpl<Vaga, Integer> implements VagaDA
 		super();
 	}
 
-	public List<Vaga> buscarPorNome(String nome) {
-		return em.createQuery("from Vaga v where v.nome like :n", Vaga.class)
-				.setParameter("n", "%" + nome + "%").getResultList();
+	public List<Vaga> buscarPorNome(String descricao) {
+		return em.createQuery("from Vaga v where v.descricao like :n", Vaga.class)
+				.setParameter("n", "%"+descricao+"%").getResultList();
 	}
 	
 	public List<Vaga> buscarPorLocalizacao(String localizacao) {
