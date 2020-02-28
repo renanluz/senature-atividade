@@ -1,5 +1,7 @@
 package br.com.senature.sc.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +14,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_vaga")
-public class Vaga {
-	
+public class Vaga implements Serializable{
+
 	@Id
 	@SequenceGenerator(name = "vaga", sequenceName = "sq_vaga", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vaga")
@@ -26,7 +28,7 @@ public class Vaga {
 	@Column(name = "vl_diaria")
 	private float valorDiaria;
 	
-	@Column(name = "localizacao")
+	@Column(name = "ds_localizacao")
 	private String localizacao;
 	
 	@JoinColumn(name = "id_tipo_vaga")
