@@ -36,6 +36,12 @@ public class TipoVaga {
 		this.id = id;
 		this.nome = nome;
 		this.vagas = vagas;
+	}	
+
+	public TipoVaga(int id, String nome) {
+		super();
+		this.id = id;
+		this.nome = nome;
 	}
 
 	public int getId() {
