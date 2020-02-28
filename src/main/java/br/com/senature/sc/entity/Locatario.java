@@ -1,7 +1,5 @@
 package br.com.senature.sc.entity;
 
-import java.util.Collection;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,11 +26,10 @@ public class Locatario {
 		super();
 	}
 
-	public Locatario(int id, String nome, Collection<Vaga> vagas) {
+	public Locatario(int id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		//this.vagas = vagas;
 	}
 
 	public int getId() {
